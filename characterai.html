@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character AI - Aisle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Reddit-style Header -->
+    <header class="reddit-header">
+        <div class="header-container">
+            <!-- Left side: Logo and menu -->
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="logo">
+                    <img src="ailogo.PNG" alt="Aisle Logo" class="logo-image">
+                    <span class="logo-text">Aisle</span>
+                </div>
+            </div>
+
+            <!-- Center: Search bar -->
+            <div class="header-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Aisle">
+                    <button class="search-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right side: User actions -->
+            <div class="header-right">
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m15.5-3.5L18 6l-1.5-1.5M6 18l1.5 1.5L9 18m-3.5-3.5L6 12l-1.5 1.5M18 6l-1.5-1.5L15 6m3.5 3.5L18 12l1.5 1.5"></path>
+                    </svg>
+                </button>
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Aisle Sidebar -->
+    <aside class="aisle-sidebar" id="aisleSidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Navigation</h3>
+                <div class="navigation-list">
+                <div class="nav-item" data-page="feed">
+                    <div class="nav-icon"><img src="icons/feedicon.png" alt="Feed" /></div>
+                    <span class="nav-name">Feed</span>
+                </div>
+                <div class="nav-item" data-page="ai-search">
+                    <div class="nav-icon"><img src="icons/aiicon.png" alt="AI Search" /></div>
+                    <span class="nav-name">AI Search</span>
+                </div>
+                <div class="nav-item" data-page="create">
+                    <div class="nav-icon"><img src="icons/createicon.png" alt="Create" /></div>
+                    <span class="nav-name">Create</span>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Separator line -->
+            <div class="sidebar-separator"></div>
+            
+            <!-- Categories section -->
+            <div class="sidebar-section">
+                <div class="categories-header" id="categoriesHeader">
+                    <h3>Categories</h3>
+                    <div class="expand-icon" id="expandIcon">▼</div>
+                </div>
+                <div class="categories-list" id="categoriesList">
+                    <div class="category-item">
+                        <div class="category-icon">📋</div>
+                        <span class="category-name">General</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">💰</div>
+                        <span class="category-name">Accounting</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">⚛️</div>
+                        <span class="category-name">Physics</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">✍️</div>
+                        <span class="category-name">Writing</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">🎬</div>
+                        <span class="category-name">Entertainment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content" id="mainContent">
+        <div class="content-container">
+            <!-- Character AI Header -->
+            <div class="character-ai-header">
+                <div class="character-ai-logo">
+                    <img src="charai.jpg" alt="Character.AI Logo" class="logo-image">
+                </div>
+                <div class="character-ai-info">
+                    <div class="character-ai-name">Character.AI</div>
+                    <div class="character-ai-ranking">#2 in Entertainment</div>
+                    <div class="character-ai-rating">
+                        <div class="rating-stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-score">4.8</span>
+                        <span class="rating-count">(12,847 reviews)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Toggle Buttons -->
+            <div class="character-ai-toggle-buttons">
+                <button class="toggle-button active" id="overviewButton">Overview</button>
+                <button class="toggle-button" id="reviewsButton">Reviews</button>
+            </div>
+
+            <!-- Overview Content -->
+            <div class="character-ai-content" id="overviewContent">
+                <div class="overview-section">
+                    <h3>About Character.AI</h3>
+                    <p>Character.AI is a cutting-edge conversational AI platform that enables users to create, interact with, and customize AI characters for entertainment, education, and creative purposes. The platform uses advanced language models to generate human-like conversations with a diverse range of AI personalities.</p>
+                    
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><strong>Character Creation:</strong> Build custom AI characters with unique personalities, backstories, and conversation styles</li>
+                        <li><strong>Diverse Personalities:</strong> Choose from thousands of pre-made characters or create your own</li>
+                        <li><strong>Interactive Conversations:</strong> Engage in natural, flowing dialogues with AI characters</li>
+                        <li><strong>Educational Content:</strong> Learn from historical figures, fictional characters, and expert personas</li>
+                        <li><strong>Creative Writing:</strong> Use AI characters as writing partners and creative collaborators</li>
+                        <li><strong>Entertainment:</strong> Roleplay scenarios, storytelling, and interactive entertainment</li>
+                    </ul>
+
+                    <h4>Use Cases</h4>
+                    <p>Character.AI is perfect for writers seeking inspiration, students learning from historical figures, gamers looking for interactive storytelling, or anyone wanting to explore creative conversations with AI. The platform serves as both an educational tool and a source of entertainment, making AI interaction accessible and engaging for users of all ages.</p>
+                </div>
+            </div>
+
+            <!-- Reviews Content -->
+            <div class="character-ai-content hidden" id="reviewsContent">
+                <!-- AI Summary of Reviews -->
+                <div class="reviews-summary">
+                    <h3>AI Summary of Reviews</h3>
+                    <div class="summary-box">
+                        <p>Based on analysis of 12,847 user reviews, Character.AI receives overwhelmingly positive feedback with an average rating of 4.8/5. Users consistently praise the platform's ability to create engaging, lifelike conversations and the diverse range of character personalities available. The most frequently mentioned strengths include creative writing assistance, educational value, and entertainment quality. Common areas for improvement mentioned include occasional response inconsistencies and the need for more advanced customization options.</p>
+                    </div>
+                </div>
+
+                <!-- Individual Reviews -->
+                <div class="individual-reviews">
+                    <h3>Customer Reviews</h3>
+                    
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Sarah M.</div>
+                                <div class="review-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="review-date">2 days ago</div>
+                        </div>
+                        <div class="review-text">
+                            "Character.AI has completely transformed my creative writing process. The AI characters provide incredible inspiration and help me develop storylines I never would have thought of. The conversations feel so natural and engaging!"
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Alex Chen</div>
+                                <div class="review-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="review-date">1 week ago</div>
+                        </div>
+                        <div class="review-text">
+                            "As a history teacher, I use Character.AI to let my students 'talk' to historical figures. It's amazing how well the AI captures different personalities and time periods. My students are more engaged than ever!"
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Mike R.</div>
+                                <div class="review-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">☆</span>
+                                </div>
+                            </div>
+                            <div class="review-date">2 weeks ago</div>
+                        </div>
+                        <div class="review-text">
+                            "Great platform overall! The character variety is impressive and conversations are usually very engaging. Sometimes the AI responses can be a bit repetitive, but it's still a fantastic tool for creative projects."
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Emma L.</div>
+                                <div class="review-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="review-date">3 weeks ago</div>
+                        </div>
+                        <div class="review-text">
+                            "I've been using Character.AI for roleplay scenarios and it's incredible how well the AI adapts to different situations. The character consistency is impressive and it feels like talking to real people sometimes!"
+                        </div>
+                    </div>
+
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">David K.</div>
+                                <div class="review-rating">
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                    <span class="star">★</span>
+                                </div>
+                            </div>
+                            <div class="review-date">1 month ago</div>
+                        </div>
+                        <div class="review-text">
+                            "Perfect for entertainment and learning. The AI characters are diverse and well-developed. I especially love the educational characters - they make learning fun and interactive!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

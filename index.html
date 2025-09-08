@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Reddit-style Header -->
+    <header class="reddit-header">
+        <div class="header-container">
+            <!-- Left side: Logo and menu -->
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="logo">
+                    <img src="ailogo.PNG" alt="Aisle Logo" class="logo-image">
+                    <span class="logo-text">Aisle</span>
+                </div>
+            </div>
+
+            <!-- Center: Search bar -->
+            <div class="header-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Aisle">
+                    <button class="search-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right side: User actions -->
+            <div class="header-right">
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m15.5-3.5L18 6l-1.5-1.5M6 18l1.5 1.5L9 18m-3.5-3.5L6 12l-1.5 1.5M18 6l-1.5-1.5L15 6m3.5 3.5L18 12l1.5 1.5"></path>
+                    </svg>
+                </button>
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Aisle Sidebar -->
+    <aside class="aisle-sidebar" id="aisleSidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Navigation</h3>
+                <div class="navigation-list">
+                <div class="nav-item active" data-page="feed">
+                    <div class="nav-icon"><img src="icons/feedicon.png" alt="Feed" /></div>
+                    <span class="nav-name">Feed</span>
+                </div>
+                <div class="nav-item" data-page="ai-search">
+                    <div class="nav-icon"><img src="icons/aiicon.png" alt="AI Search" /></div>
+                    <span class="nav-name">AI Search</span>
+                </div>
+                <div class="nav-item" data-page="create">
+                    <div class="nav-icon"><img src="icons/createicon.png" alt="Create" /></div>
+                    <span class="nav-name">Create</span>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Separator line -->
+            <div class="sidebar-separator"></div>
+            
+            <!-- Categories section -->
+            <div class="sidebar-section">
+                <div class="categories-header" id="categoriesHeader">
+                    <h3>Categories</h3>
+                    <div class="expand-icon" id="expandIcon">▼</div>
+                </div>
+                <div class="categories-list" id="categoriesList">
+                    <div class="category-item">
+                        <div class="category-icon">📋</div>
+                        <span class="category-name">General</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">💰</div>
+                        <span class="category-name">Accounting</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">⚛️</div>
+                        <span class="category-name">Physics</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">✍️</div>
+                        <span class="category-name">Writing</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">🎬</div>
+                        <span class="category-name">Entertainment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content" id="mainContent">
+        <div class="content-container">
+            <div class="post-feed">
+                <div class="post">
+                    <div class="post-header">
+                        <div class="profile-section">
+                            <div class="profile-picture">
+                                <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&h=150&fit=crop&crop=face" alt="Profile" />
+                            </div>
+                            <div class="profile-info">
+                                <div class="profile-name">Riley Kim</div>
+                                <div class="post-time">30m</div>
+                            </div>
+                        </div>
+                        <button class="more-options">⋯</button>
+                    </div>
+                    
+                    <div class="post-content">
+                        <div class="post-caption">
+                            Gemini 2.0 just dropped and it's actually pretty good? Like, it's not trying to be overly helpful anymore, just gives you what you ask for. Refreshing change from the usual AI personality 😂
+                        </div>
+                    </div>
+                    
+                    <div class="post-actions">
+                        <button class="action-button like-button">
+                            <span class="action-icon">❤️</span>
+                            <span class="action-count">73</span>
+                        </button>
+                        <button class="action-button comment-button">
+                            <span class="action-icon">💬</span>
+                            <span class="action-count">15</span>
+                        </button>
+                        <button class="action-button share-button">
+                            <span class="action-icon">🔄</span>
+                            <span class="action-count">6</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

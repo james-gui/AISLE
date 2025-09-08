@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment - Aisle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Aisle Header -->
+    <header class="reddit-header">
+        <div class="header-container">
+            <!-- Left side: Logo and menu -->
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="logo">
+                    <img src="ailogo.PNG" alt="Aisle Logo" class="logo-image">
+                    <span class="logo-text">Aisle</span>
+                </div>
+            </div>
+
+            <!-- Center: Search bar -->
+            <div class="header-center">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Aisle">
+                    <button class="search-button">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right side: User actions -->
+            <div class="header-right">
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m15.5-3.5L18 6l-1.5-1.5M6 18l1.5 1.5L9 18m-3.5-3.5L6 12l-1.5 1.5M18 6l-1.5-1.5L15 6m3.5 3.5L18 12l1.5 1.5"></path>
+                    </svg>
+                </button>
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Aisle Sidebar -->
+    <aside class="aisle-sidebar" id="aisleSidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Navigation</h3>
+                <div class="navigation-list">
+                <div class="nav-item" data-page="feed">
+                    <div class="nav-icon"><img src="icons/feedicon.png" alt="Feed" /></div>
+                    <span class="nav-name">Feed</span>
+                </div>
+                <div class="nav-item" data-page="ai-search">
+                    <div class="nav-icon"><img src="icons/aiicon.png" alt="AI Search" /></div>
+                    <span class="nav-name">AI Search</span>
+                </div>
+                <div class="nav-item" data-page="create">
+                    <div class="nav-icon"><img src="icons/createicon.png" alt="Create" /></div>
+                    <span class="nav-name">Create</span>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Separator line -->
+            <div class="sidebar-separator"></div>
+            
+            <!-- Categories section -->
+            <div class="sidebar-section">
+                <div class="categories-header" id="categoriesHeader">
+                    <h3>Categories</h3>
+                    <div class="expand-icon" id="expandIcon">▼</div>
+                </div>
+                <div class="categories-list" id="categoriesList">
+                    <div class="category-item">
+                        <div class="category-icon">📋</div>
+                        <span class="category-name">General</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">💰</div>
+                        <span class="category-name">Accounting</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">⚛️</div>
+                        <span class="category-name">Physics</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">✍️</div>
+                        <span class="category-name">Writing</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">🎬</div>
+                        <span class="category-name">Entertainment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="main-content" id="mainContent">
+        <div class="content-container">
+            <!-- Entertainment Header -->
+            <div class="category-header">
+                <h1 class="category-title">Entertainment</h1>
+                <p class="category-description">
+                    Discover AI-powered entertainment tools and platforms. From AI-generated videos and music to interactive storytelling and virtual experiences, explore the cutting-edge of entertainment technology.
+                </p>
+                
+                <!-- Toggle Buttons -->
+                <div class="toggle-buttons">
+                    <button class="toggle-button active" id="exploreButton">Explore</button>
+                    <button class="toggle-button" id="rankingButton">Ranking</button>
+                </div>
+            </div>
+            
+            <!-- Grid View (Default) -->
+            <div class="grid-view" id="gridView">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-logo">🎬</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">RunwayML</h3>
+                            <div class="tool-rating">⭐⭐⭐⭐⭐ 4.8</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">AI-powered video editing and generation platform for creating professional content with advanced machine learning models.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-logo">🎵</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">AIVA</h3>
+                            <div class="tool-rating">⭐⭐⭐⭐⭐ 4.6</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">AI composer that creates original music for films, games, and other media projects using advanced neural networks.</p>
+                </div>
+                
+                <div class="tool-card" id="characterAICard" onclick="window.location.href='characterai.html'">
+                    <div class="tool-header">
+                        <div class="tool-logo">🎭</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Character.AI</h3>
+                            <div class="tool-rating">⭐⭐⭐⭐ 4.4</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">Create and chat with AI characters for entertainment, storytelling, and interactive experiences.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-logo">🎨</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">DALL-E 3</h3>
+                            <div class="tool-rating">⭐⭐⭐⭐⭐ 4.9</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">Generate stunning images from text descriptions for creative projects and visual storytelling.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-logo">🎮</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">AI Dungeon</h3>
+                            <div class="tool-rating">⭐⭐⭐⭐ 4.2</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">AI-powered text adventure game that creates infinite interactive stories based on your choices.</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-logo">🎪</div>
+                        <div class="tool-info">
+                            <h3 class="tool-name">Synthesia</h3>
+                            <div class="tool-rating">⭐⭐⭐⭐⭐ 4.7</div>
+                        </div>
+                    </div>
+                    <p class="tool-description">Create AI-generated videos with virtual presenters for educational and entertainment content.</p>
+                </div>
+            </div>
+            
+            <!-- List View (Hidden by default) -->
+            <div class="list-view" id="listView">
+                <div class="tool-list-item">
+                    <div class="tool-list-logo">🎨</div>
+                    <div class="tool-list-info">
+                        <div class="tool-list-name">DALL-E 3</div>
+                        <div class="tool-list-rating">⭐⭐⭐⭐⭐ 4.9</div>
+                        <div class="tool-list-category">Image Gen</div>
+                        <div class="tool-list-price">$20/mo</div>
+                    </div>
+                </div>
+                
+                <div class="tool-list-item">
+                    <div class="tool-list-logo">🎬</div>
+                    <div class="tool-list-info">
+                        <div class="tool-list-name">RunwayML</div>
+                        <div class="tool-list-rating">⭐⭐⭐⭐⭐ 4.8</div>
+                        <div class="tool-list-category">Video</div>
+                        <div class="tool-list-price">$15/mo</div>
+                    </div>
+                </div>
+                
+                <div class="tool-list-item">
+                    <div class="tool-list-logo">🎪</div>
+                    <div class="tool-list-info">
+                        <div class="tool-list-name">Synthesia</div>
+                        <div class="tool-list-rating">⭐⭐⭐⭐⭐ 4.7</div>
+                        <div class="tool-list-category">Video</div>
+                        <div class="tool-list-price">$30/mo</div>
+                    </div>
+                </div>
+                
+                <div class="tool-list-item">
+                    <div class="tool-list-logo">🎵</div>
+                    <div class="tool-list-info">
+                        <div class="tool-list-name">AIVA</div>
+                        <div class="tool-list-rating">⭐⭐⭐⭐⭐ 4.6</div>
+                        <div class="tool-list-category">Music</div>
+                        <div class="tool-list-price">$11/mo</div>
+                    </div>
+                </div>
+                
+                <div class="tool-list-item">
+                    <div class="tool-list-logo">🎭</div>
+                    <div class="tool-list-info">
+                        <div class="tool-list-name">Character.AI</div>
+                        <div class="tool-list-rating">⭐⭐⭐⭐ 4.4</div>
+                        <div class="tool-list-category">Chat</div>
+                        <div class="tool-list-price">Free</div>
+                    </div>
+                </div>
+                
+                <div class="tool-list-item">
+                    <div class="tool-list-logo">🎮</div>
+                    <div class="tool-list-info">
+                        <div class="tool-list-name">AI Dungeon</div>
+                        <div class="tool-list-rating">⭐⭐⭐⭐ 4.2</div>
+                        <div class="tool-list-category">Gaming</div>
+                        <div class="tool-list-price">$10/mo</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

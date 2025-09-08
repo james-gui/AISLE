@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Search - Aisle</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Aisle Header -->
+    <header class="reddit-header">
+        <div class="header-container">
+            <!-- Left side: Logo and menu -->
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+                <div class="logo">
+                    <img src="ailogo.PNG" alt="Aisle Logo" class="logo-image">
+                    <span class="logo-text">Aisle</span>
+                </div>
+            </div>
+
+            <!-- Center: Empty for AI search page -->
+            <div class="header-center">
+                <!-- No search bar on AI search page -->
+            </div>
+
+            <!-- Right side: User actions -->
+            <div class="header-right">
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6m0 6v6m11-7h-6m-6 0H1m15.5-3.5L18 6l-1.5-1.5M6 18l1.5 1.5L9 18m-3.5-3.5L6 12l-1.5 1.5M18 6l-1.5-1.5L15 6m3.5 3.5L18 12l1.5 1.5"></path>
+                    </svg>
+                </button>
+                <button class="header-button">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Aisle Sidebar -->
+    <aside class="aisle-sidebar" id="aisleSidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3>Navigation</h3>
+                <div class="navigation-list">
+                <div class="nav-item" data-page="feed">
+                    <div class="nav-icon"><img src="icons/feedicon.png" alt="Feed" /></div>
+                    <span class="nav-name">Feed</span>
+                </div>
+                <div class="nav-item active" data-page="ai-search">
+                    <div class="nav-icon"><img src="icons/aiicon.png" alt="AI Search" /></div>
+                    <span class="nav-name">AI Search</span>
+                </div>
+                <div class="nav-item" data-page="create">
+                    <div class="nav-icon"><img src="icons/createicon.png" alt="Create" /></div>
+                    <span class="nav-name">Create</span>
+                </div>
+                </div>
+            </div>
+            
+            <!-- Separator line -->
+            <div class="sidebar-separator"></div>
+            
+            <!-- Categories section -->
+            <div class="sidebar-section">
+                <div class="categories-header" id="categoriesHeader">
+                    <h3>Categories</h3>
+                    <div class="expand-icon" id="expandIcon">▼</div>
+                </div>
+                <div class="categories-list" id="categoriesList">
+                    <div class="category-item">
+                        <div class="category-icon">📋</div>
+                        <span class="category-name">General</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">💰</div>
+                        <span class="category-name">Accounting</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">⚛️</div>
+                        <span class="category-name">Physics</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">✍️</div>
+                        <span class="category-name">Writing</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon">🎬</div>
+                        <span class="category-name">Entertainment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- AI Search Main Content -->
+    <main class="ai-search-main" id="aiSearchMain">
+        <div class="ai-search-container">
+            <div class="chatbox-container">
+                <div class="chatbox">
+                    <div class="chatbox-header">
+                        <div class="ai-avatar">
+                            <div class="ai-icon">🤖</div>
+                        </div>
+                        <div class="ai-info">
+                            <h2>Ask Aisle</h2>
+                            <p>I will help you find the perfect AI</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chatbox-messages" id="chatboxMessages">
+                        <div class="message ai-message">
+                            <div class="message-avatar">
+                                <div class="ai-icon-small">🤖</div>
+                            </div>
+                            <div class="message-content">
+                                <p>Hello! I'm Aisle, your AI assistant. I can help you find the perfect AI tools for your specific needs. What are you looking to accomplish today?</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chatbox-input-container">
+                        <div class="chatbox-input-wrapper">
+                            <input type="text" class="chatbox-input" id="chatboxInput" placeholder="Ask me anything...">
+                            <button class="send-button" id="sendButton">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
